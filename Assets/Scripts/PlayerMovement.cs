@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] float lookSpeed = 2f;
     [SerializeField] float lookXLimit = 45f;
+    [SerializeField] AudioSource TupTup;
 
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
@@ -56,6 +57,11 @@ public class PlayerMovement : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
+        if (Mathf.Abs(curSpeedX) > 0 || Mathf.Abs(curSpeedY) > 0)
+            TupTup.enabled = true;
+        else
+            TupTup.enabled = false;
+
         #endregion
 
         #region Handles Jumping
@@ -76,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                moveDirection.y -= gravity * Time.deltaTime * 1.5f;
+                moveDirection.y -= gravity * Time.deltaTime * 1.2f;
             }
 
         }
