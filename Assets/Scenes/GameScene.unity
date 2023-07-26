@@ -155,8 +155,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 1
   m_Resolution: 1024
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 7.660285, y: 8.899617, z: 15.294861}
-  m_BoxOffset: {x: -1.4461846, y: -0.5501914, z: 2.3525693}
+  m_BoxSize: {x: 10, y: 10, z: 10}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 1
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -182,7 +182,7 @@ Transform:
   m_GameObject: {fileID: 76360927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.75, y: 1.91, z: 0.28}
+  m_LocalPosition: {x: 8.37, y: 1.415, z: 0.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -240,6 +240,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3a69e7be12063e5438ad973db5b19f37, type: 2}
+    - target: {fileID: -7486995244042003605, guid: 165f9519674723747a082e7f990097b1, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7486995244042003605, guid: 165f9519674723747a082e7f990097b1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2333668015826065791, guid: 165f9519674723747a082e7f990097b1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -251,6 +259,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 165f9519674723747a082e7f990097b1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572683484597976625, guid: 165f9519674723747a082e7f990097b1, type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6572683484597976625, guid: 165f9519674723747a082e7f990097b1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -326,8 +338,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 1
   m_Resolution: 1024
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 13.779439, y: 10, z: 6.487348}
-  m_BoxOffset: {x: -3.1102805, y: 0, z: 1.7946694}
+  m_BoxSize: {x: 10, y: 10, z: 10}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 1
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -353,7 +365,56 @@ Transform:
   m_GameObject: {fileID: 445476695}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.449, y: 1.91, z: -1.224}
+  m_LocalPosition: {x: -2.74, y: 1.309, z: 0.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &607806879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 607806881}
+  - component: {fileID: 607806880}
+  m_Layer: 0
+  m_Name: PostProcess
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &607806880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607806879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+--- !u!4 &607806881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607806879}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.3201203, y: -1.1930442, z: -7.1623735}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -725,7 +786,7 @@ ReflectionProbe:
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
-  m_Importance: 1
+  m_Importance: 0
   m_CustomBakedTexture: {fileID: 0}
 --- !u!4 &1703822811
 Transform:
@@ -1566,3 +1627,4 @@ SceneRoots:
   - {fileID: 1682239419}
   - {fileID: 432017015}
   - {fileID: 2035679310}
+  - {fileID: 607806881}

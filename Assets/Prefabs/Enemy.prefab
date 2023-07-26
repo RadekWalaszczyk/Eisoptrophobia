@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  mat: {fileID: 6914219115251983097}
+  mat: {fileID: 0}
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1325,11 +1325,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
---- !u!137 &6914219115251983097 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4352274512095136748, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
-  m_PrefabInstance: {fileID: 7174901863188637973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7212767998184574718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
