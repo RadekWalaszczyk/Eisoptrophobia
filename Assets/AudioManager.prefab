@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1135396413099443278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787544918019331753}
+  - component: {fileID: 6428531349124706694}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1787544918019331753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135396413099443278}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6428531349124706694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135396413099443278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e45090a46e11d44fb66d00df8807d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - soundName: Shoot
+    clip: {fileID: 8300000, guid: 1792dddc168f70e4d9008dec4d1fa309, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - soundName: Reload
+    clip: {fileID: 8300000, guid: a88837e50b4a4c54383b3f4d1e9c9017, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - soundName: Lock
+    clip: {fileID: 8300000, guid: d6ce6dda225f2ba46bfc79cdda3fb4d1, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - soundName: PlayerJump
+    clip: {fileID: 8300000, guid: fcbd613bd434a804db88f7312fc80584, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - soundName: PickUpAmmo
+    clip: {fileID: 8300000, guid: 632b434b9977e8047b2b18c1575bc0dd, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
