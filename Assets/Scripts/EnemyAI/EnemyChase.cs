@@ -17,6 +17,8 @@ public class EnemyChase : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (enemyController.dead) return;
+
         if (enemyController.navMeshAgent.isActiveAndEnabled == true)
             enemyController.MoveToPlayer();
 

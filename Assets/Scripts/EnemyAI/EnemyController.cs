@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float SeeDistance;
     [SerializeField] float AttackDistance;
 
+    public bool dead = false;
+
     private void Start()
     {
         player = PlayerController.inst;
@@ -33,5 +35,18 @@ public class EnemyController : MonoBehaviour
     {
         var distance = Vector3.Distance(transform.position, player.transform.position);
         return distance < AttackDistance;
+    }
+
+    public void Dead()
+    {
+        dead = true;
+        StartCoroutine(DeadDelay());
+        GetComponent<Collider>().enabled = false;
+    }
+
+    IEnumerator DeadDelay()
+    {
+        yield return new WaitForSeconds(3.5f);
+        Destroy(gameObject);
     }
 }

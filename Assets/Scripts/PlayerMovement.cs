@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Animator anim;
     public int ammo = 6;
     [SerializeField] int currentAmmo = 6;
+    [SerializeField] ParticleSystem MuzzleFlesh;
 
     void Start()
     {
@@ -69,7 +70,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (!characterController.isGrounded)
         {
-            moveDirection.y -= gravity * Time.deltaTime;
+            if (moveDirection.y > 0)
+            {
+                moveDirection.y -= gravity * Time.deltaTime;
+            }
+            else
+            {
+                moveDirection.y -= gravity * Time.deltaTime * 1.5f;
+            }
+
         }
 
         #endregion
@@ -112,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (currentAmmo > 0)
             {
+                MuzzleFlash();
                 AudioManager.inst.PlaySoundByName("Shoot", 0.1f);
                 anim.SetBool("Shoot", true);
 
@@ -161,5 +171,10 @@ public class PlayerMovement : MonoBehaviour
         if (dead) return;
         dead = true;
         anim.SetTrigger("Suicide");
+    }
+
+    public void MuzzleFlash()
+    {
+        MuzzleFlesh.Play();
     }
 }
