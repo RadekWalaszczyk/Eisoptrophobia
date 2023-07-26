@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.5149074, g: 0.5983203, b: 0.8207547, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -794,7 +794,7 @@ Transform:
   m_GameObject: {fileID: 1391544925}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7414965, y: -0.25881878, z: -0.00064914534, w: 0.61902773}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 19.28, z: 2.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1708,6 +1708,10 @@ PrefabInstance:
     - target: {fileID: 1367773558142737726, guid: 255c05e6e2ace1a40bb5ec40acb93eb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319859999440455152, guid: 255c05e6e2ace1a40bb5ec40acb93eb0, type: 3}
+      propertyPath: m_Size.x
+      value: 33.1
       objectReference: {fileID: 0}
     - target: {fileID: 7679274904438400599, guid: 255c05e6e2ace1a40bb5ec40acb93eb0, type: 3}
       propertyPath: probes.Array.size
