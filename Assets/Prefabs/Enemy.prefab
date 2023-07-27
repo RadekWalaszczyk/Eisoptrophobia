@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7209223492004615986}
   - component: {fileID: 241993125566564164}
   - component: {fileID: 4613989816120634886}
+  - component: {fileID: 9050100733748168834}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -639,6 +640,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9050100733748168834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725987872037259921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed93790ece48b624e9e8be4e7a83d7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyController: {fileID: 6332677209958483184}
 --- !u!1 &9175855291844610631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,7 +2149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyController: {fileID: 6332677209958483184}
-  isVisible: 0
 --- !u!4 &4941787285795572492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
@@ -3190,10 +3203,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5323494798568637238, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5885528067789634474}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2463989775341973783}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
 --- !u!95 &3672908229071148164 stripped
 Animator:
@@ -3210,22 +3220,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
   m_PrefabInstance: {fileID: 7174901863188637973}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8021815744518460484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
-  m_PrefabInstance: {fileID: 7174901863188637973}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2463989775341973783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8021815744518460484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed93790ece48b624e9e8be4e7a83d7e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyController: {fileID: 6332677209958483184}
-  isVisible: 0

@@ -5,28 +5,17 @@ using UnityEngine;
 public class EnemyAnimationController : MonoBehaviour
 {
     [SerializeField] EnemyController enemyController;
-    [SerializeField] bool isVisible;
     PlayerController player;
 
     private void Start()
     {
-        player = enemyController.player;
-    }
-
-    private void OnBecameInvisible()
-    {
-        isVisible = false;
-    }
-
-    private void OnBecameVisible()
-    {
-        isVisible = true;
+        player = PlayerController.inst;
     }
 
     float dmgDelay = 0.5f;
     private void Update()
     {
-        if (isVisible && !enemyController.dead)
+        if (!Physics.Linecast(transform.position + Vector3.up, player.transform.position + Vector3.up, LayerMask.GetMask("Default"), QueryTriggerInteraction.Ignore) && !enemyController.dead)
         {
             dmgDelay -= Time.deltaTime;
             if (dmgDelay <= 0)
