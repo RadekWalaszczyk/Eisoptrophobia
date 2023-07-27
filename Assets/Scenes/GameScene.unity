@@ -14363,6 +14363,10 @@ PrefabInstance:
       value: MeshMap (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 165f9519674723747a082e7f990097b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 165f9519674723747a082e7f990097b1, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
