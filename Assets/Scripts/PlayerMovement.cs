@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
@@ -27,12 +28,17 @@ public class PlayerMovement : MonoBehaviour
     public int ammo = 6;
     [SerializeField] int currentAmmo = 6;
     [SerializeField] ParticleSystem MuzzleFlesh;
+    [SerializeField] OnAmmoChanged onAmmoChanged;
+    [System.Serializable]
+    class OnAmmoChanged : UnityEvent<int, int> { };
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        onAmmoChanged?.Invoke(currentAmmo, ammo);
     }
 
     void Update()
@@ -149,7 +155,15 @@ public class PlayerMovement : MonoBehaviour
                 AudioManager.inst.PlaySoundByName("Lock");
                 anim.SetTrigger("ShootEmpty");
             }
+
+            onAmmoChanged?.Invoke(currentAmmo, ammo);
         }
+    }
+
+    public void AddAmmo(int ammoAmount)
+    {
+        ammo += ammoAmount;
+        onAmmoChanged?.Invoke(currentAmmo, ammo);
     }
 
     void Reload()
@@ -168,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 AudioManager.inst.PlaySoundByName("Lock");
             }
+            onAmmoChanged?.Invoke(currentAmmo, ammo);
         }
     }
 

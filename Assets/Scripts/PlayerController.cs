@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public void AddAmmo(int ammoAmount)
     {
-        PlayerMovement.ammo += ammoAmount;
+        PlayerMovement.AddAmmo(ammoAmount);
     }
 
     public void BlackScreen()

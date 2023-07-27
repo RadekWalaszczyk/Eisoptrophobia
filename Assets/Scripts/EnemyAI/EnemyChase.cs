@@ -11,6 +11,7 @@ public class EnemyChase : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         enemyController = animator.GetComponentInParent<EnemyController>();
+        enemyController.PlayAgroSound();
     }
 
     float damageDelay = 1;
@@ -22,17 +23,12 @@ public class EnemyChase : StateMachineBehaviour
         if (enemyController.navMeshAgent.isActiveAndEnabled == true)
             enemyController.MoveToPlayer();
 
-        if (enemyController.CanAttack())
+        if (enemyController.CanDicreaseSanity())
         {
             if (enemyController.navMeshAgent.isActiveAndEnabled == true)
                 enemyController.navMeshAgent.isStopped = true;
 
-            damageDelay -= Time.deltaTime;
-            if (damageDelay <= 0)
-            {
-                PlayerController.inst.Health.GetDamage(1);
-                damageDelay = 1;
-            }
+            animator.SetTrigger("Attack");
         }
         else
         {

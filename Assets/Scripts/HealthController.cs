@@ -11,22 +11,24 @@ public class NewUnityEvent : UnityEvent<object>
 
 public class HealthController : MonoBehaviour
 {
+    [SerializeField] int maxHealth = 0;
     [SerializeField] int health = 0;
     [SerializeField] Renderer mat;
 
     [Space(10)]
     [Header("____ EVENTY ____")]
     [SerializeField] OnHealthChanged onHealthChanged;
-    [SerializeField] OnHealthChanged onGetDamage;
+    [SerializeField] OnGetDamage onGetDamage;
     [SerializeField] UnityEvent OnDead;
 
     [System.Serializable]
-    class OnHealthChanged : UnityEvent<int> { };
+    class OnHealthChanged : UnityEvent<int, int> { };
+    [System.Serializable]
     class OnGetDamage : UnityEvent<int> { };
 
     private void Start()
     {
-        onHealthChanged?.Invoke(health);
+        onHealthChanged?.Invoke(health, maxHealth);
     }
 
     public void GetDamage(int damage)
@@ -35,7 +37,7 @@ public class HealthController : MonoBehaviour
 
         StartCoroutine(MarkDamage());
 
-        onHealthChanged?.Invoke(health);
+        onHealthChanged?.Invoke(health, maxHealth);
         onGetDamage?.Invoke(health);
 
         if (health <= 0)
@@ -45,7 +47,7 @@ public class HealthController : MonoBehaviour
     public void SetHealth(int currHealth)
     {
         health = currHealth;
-        onHealthChanged?.Invoke(health);
+        onHealthChanged?.Invoke(health, maxHealth);
     }
 
     public IEnumerator MarkDamage()
