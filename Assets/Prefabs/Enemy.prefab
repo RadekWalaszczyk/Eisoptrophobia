@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2976cf9e8ca623c41b0967b82a685929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   navMeshAgent: {fileID: 1684063306082807058}
   SeeDistance: 20
   SanityDistance: 6
@@ -2112,34 +2113,34 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2267210946831259130}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -1647625329665636019, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1652154434482294447}
+      addedObject: {fileID: 2913957476222068559}
   m_SourcePrefab: {fileID: 100100000, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
---- !u!4 &4941787285795572492 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
-  m_PrefabInstance: {fileID: 4836435162832989415}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5755338597462135222 stripped
+--- !u!1 &3043322128620742058 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
+  m_CorrespondingSourceObject: {fileID: -1647625329665636019, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
   m_PrefabInstance: {fileID: 4836435162832989415}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1652154434482294447
+--- !u!114 &2913957476222068559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5755338597462135222}
+  m_GameObject: {fileID: 3043322128620742058}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed93790ece48b624e9e8be4e7a83d7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyController: {fileID: 6332677209958483184}
-  ignoreAttacks: 1
+  isVisible: 0
+--- !u!4 &4941787285795572492 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
+  m_PrefabInstance: {fileID: 4836435162832989415}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5076307934439648161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3227,4 +3228,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyController: {fileID: 6332677209958483184}
-  ignoreAttacks: 0
+  isVisible: 0

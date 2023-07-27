@@ -5,11 +5,40 @@ using UnityEngine;
 public class EnemyAnimationController : MonoBehaviour
 {
     [SerializeField] EnemyController enemyController;
-    [SerializeField] bool ignoreAttacks;
+    [SerializeField] bool isVisible;
+    PlayerController player;
 
-    public void Attack()
+    private void Start()
     {
-        if (!ignoreAttacks)
-            enemyController.CanDicreaseSanity(true);
+        player = enemyController.player;
+    }
+
+    private void OnBecameInvisible()
+    {
+        isVisible = false;
+    }
+
+    private void OnBecameVisible()
+    {
+        isVisible = true;
+    }
+
+    float dmgDelay = 0.5f;
+    private void Update()
+    {
+        if (isVisible && !enemyController.dead)
+        {
+            dmgDelay -= Time.deltaTime;
+            if (dmgDelay <= 0)
+            {
+                Attack();
+                dmgDelay = 0.5f;
+            }
+        }
+    }
+
+    void Attack()
+    {
+        enemyController.CanDicreaseSanity(true);
     }
 }

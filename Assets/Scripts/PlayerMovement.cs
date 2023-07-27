@@ -143,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
                 currentAmmo -= 1;
                 PlayerRecoil.inst.SetRecoil(-15f, 15f, 2f, 6f, 2f);
 
-                if (Physics.Raycast(ray, out hit, 100f, LayerMask.GetMask("Enemy", "Default")))
+                if (Physics.Raycast(ray, out hit, 100f, LayerMask.GetMask("Enemy", "Default"), QueryTriggerInteraction.Ignore))
                 {
                     var health = hit.collider.gameObject.GetComponent<HealthController>();
                     if (health != null)

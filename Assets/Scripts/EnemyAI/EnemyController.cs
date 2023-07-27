@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    PlayerController player;
+    public PlayerController player;
     public NavMeshAgent navMeshAgent;
 
     [SerializeField] float SeeDistance;
@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour
         var finalDistance = distance < SanityDistance;
 
         if (finalDistance && withAttack)
-            PlayerController.inst.Health.GetDamage(2);
+            PlayerController.inst.Health.GetDamage(1);
 
         return finalDistance;
     }
