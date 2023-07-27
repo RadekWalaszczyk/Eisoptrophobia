@@ -136,7 +136,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 9175855291844610631}
+      - m_Target: {fileID: 6919349062164192358}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 1684063306082807058}
   SeeDistance: 20
-  SanityDistance: 3
+  SanityDistance: 6
   AgroSound: {fileID: 6919349062164192358}
   Anim: {fileID: 3672908229071148164}
   dead: 0

@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour
         var finalDistance = distance < SanityDistance;
 
         if (finalDistance && withAttack)
-            PlayerController.inst.Health.GetDamage(1);
+            PlayerController.inst.Health.GetDamage(2);
 
         return finalDistance;
     }
