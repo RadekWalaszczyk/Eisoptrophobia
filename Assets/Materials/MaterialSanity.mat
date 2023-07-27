@@ -127,7 +127,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _VignetteRadius: 0.2
+    - _VignetteRadius: 0.26666665
     - _VoronolPower: 1
     - _VoronolScale: 35
     - _VoronolSpeed: 2
