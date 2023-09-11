@@ -149,6 +149,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9050100733748168834}
+        m_TargetAssemblyTypeName: EnemyAnimationController, Assembly-CSharp
+        m_MethodName: Disappearing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6332677209958483184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +179,7 @@ MonoBehaviour:
   SanityDistance: 6
   AgroSound: {fileID: 6919349062164192358}
   Anim: {fileID: 3672908229071148164}
+  Anim2: {fileID: 1329948984258515318}
   dead: 0
 --- !u!195 &1684063306082807058
 NavMeshAgent:
@@ -2126,29 +2139,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2267210946831259130}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -1647625329665636019, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2913957476222068559}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
---- !u!1 &3043322128620742058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -1647625329665636019, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
+--- !u!95 &1329948984258515318 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}
   m_PrefabInstance: {fileID: 4836435162832989415}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2913957476222068559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3043322128620742058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed93790ece48b624e9e8be4e7a83d7e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyController: {fileID: 6332677209958483184}
 --- !u!4 &4941787285795572492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8cd1988a15fe95f4a8c117a0c08818fe, type: 3}

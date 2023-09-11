@@ -30,4 +30,24 @@ public class EnemyAnimationController : MonoBehaviour
     {
         enemyController.CanDicreaseSanity(true);
     }
+
+    public void Disappearing()
+    {
+        StartCoroutine(Dissolve());
+    }
+
+    IEnumerator Dissolve()
+    {
+        for (float DissolveProgress = 1; DissolveProgress >= 0; DissolveProgress -= 0.005f)
+        {
+            var mpb = new MaterialPropertyBlock();
+
+            mpb.SetFloat("_DissolveAmount", Mathf.Clamp01(DissolveProgress));
+            foreach (var mesh in GetComponentsInChildren<Renderer>())
+            {
+                mesh.SetPropertyBlock(mpb);
+            }
+            yield return new WaitForSeconds(.01f);
+        }
+    }
 }

@@ -17,7 +17,7 @@ public class PlayerAmmoPickUp : MonoBehaviour
                 if (!canPickUp) return;
                 canPickUp = false;
 
-                /// dzwiêk klucza
+                AudioManager.inst.PlaySoundByName("PickUpKey");
                 DoorController.inst.AddKey(gameObject);
                 gameObject.SetActive(false);
             }

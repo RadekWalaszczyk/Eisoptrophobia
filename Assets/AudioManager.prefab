@@ -71,6 +71,21 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
+  - soundName: PickUpKey
+    clip: {fileID: 8300000, guid: dce3bbe2ae01fd942bea2e53566d1caf, type: 3}
+    volume: 0.9
+    pitch: 1
+    source: {fileID: 0}
+  - soundName: PutKey
+    clip: {fileID: 8300000, guid: 3dbf5f11121cf5b45b8266e4a2d127ca, type: 3}
+    volume: 0.9
+    pitch: 1
+    source: {fileID: 0}
+  - soundName: Ending
+    clip: {fileID: 8300000, guid: 394c876688389d34d9a753953d7952d5, type: 3}
+    volume: 0.9
+    pitch: 1
+    source: {fileID: 0}
 --- !u!82 &129610733245135449
 AudioSource:
   m_ObjectHideFlags: 0

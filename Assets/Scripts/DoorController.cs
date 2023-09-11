@@ -6,6 +6,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     [SerializeField] Animation anim;
+    [SerializeField] GameObject tooltip;
     [SerializeField] List<Transform> KeysHole = new List<Transform>();
     [SerializeField] List<GameObject> Keys = new List<GameObject>();
     bool canInteract = false;
@@ -41,11 +42,16 @@ public class DoorController : MonoBehaviour
 
                 OpenDoor();
 
-                /// düwiek wsadzania klucza
+                AudioManager.inst.PlaySoundByName("PutKey");
             }
 
-            /// pokazanie press E
+            tooltip.SetActive(true);
         }
+    }
+
+    private void OnMouseExit()
+    {
+        tooltip.SetActive(false);
     }
 
     void OpenDoor()

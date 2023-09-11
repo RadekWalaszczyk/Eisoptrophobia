@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float SanityDistance;
     [SerializeField] AudioSource AgroSound;
     [SerializeField] Animator Anim;
+    [SerializeField] Animator Anim2;
 
     public bool dead = false;
 
@@ -56,6 +57,7 @@ public class EnemyController : MonoBehaviour
         navMeshAgent.isStopped = false;
         navMeshAgent.enabled = false;
         Anim.SetBool("Dead", true);
+        Anim2.SetBool("Dead", true);
         StartCoroutine(DeadDelay());
         GetComponent<Collider>().enabled = false;
     }

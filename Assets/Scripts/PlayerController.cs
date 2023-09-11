@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] PlayerMovement PlayerMovement;
     [SerializeField] GameObject blackScreen;
+    [SerializeField] GameObject blackScreenEnding;
     public HealthController Health;
 
     public static PlayerController inst;
@@ -26,5 +27,10 @@ public class PlayerController : MonoBehaviour
     public void BlackScreen()
     {
         blackScreen.SetActive(true);
+    }
+
+    public void BlackScreenEnding()
+    {
+        blackScreenEnding.SetActive(true);
     }
 }
